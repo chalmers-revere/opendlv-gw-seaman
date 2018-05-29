@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    gw-seaman:
+        image: chalmersrevere/opendlv-gw-seaman-amd64:v0.0.1
+        network_mode: "host"
+        command: "opendlv-gw-seaman --cid=111 --seaman_ip=192.168.0.1 --verbose"
+
+
+    ui-default:
+        image: chalmersrevere/opendlv-ui-default-amd64:v0.0.2
+        network_mode: "host"
+        command: "--cid=111"
